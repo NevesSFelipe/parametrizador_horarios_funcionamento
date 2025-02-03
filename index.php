@@ -129,8 +129,8 @@
         
         <script src="https://kit.fontawesome.com/910e6444fa.js" crossorigin="anonymous"></script>
 
-        <script type="module" src="assets/js/parametrizacao_horarios/parametrizar.js?v=<?= time() ?>"></script>
-        <script type="module" src="assets/js/parametrizacao_horarios/dataEspecifica.js?v=<?= time() ?>"></script>
+        <script type="module" src="assets/js/parametrizar.js?v=<?= time() ?>"></script>
+        <script type="module" src="assets/js/dataEspecifica.js?v=<?= time() ?>"></script>
 
     </body>
 </html>
