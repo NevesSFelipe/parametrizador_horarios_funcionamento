@@ -23,6 +23,8 @@ function parametrizarHorarios() {
         data["horarios"] = montarDataParametrizador("Domingo", data['horarios']);
         data["horarios"]["dataEspecifica"] = montarDataParametrizadorEspecifico(form);
         data["acaoAjax"] = "salvar";
+
+        enviarAjax(data);
     
     } catch (error) {
      
@@ -30,6 +32,35 @@ function parametrizarHorarios() {
     
     }
 
+}
+
+function enviarAjax(dados) {
+
+    const url = "src/core.php"; 
+
+    fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    })
+
+    .then(response => {
+        if (!response.ok) {
+            console.log(response);
+            throw new Error('Erro ao editar o item');
+        }
+        return response.json(); // Retorna a resposta como JSON
+    })
+    
+    .then(data => {
+        alert("Horarios de Atendimento parametrizados com sucesso.")
+    })
+    
+    .catch(error => {
+        console.error('Erro:', error);
+    });
 }
 
 function montarDataParametrizador(diaSemana, data) {
