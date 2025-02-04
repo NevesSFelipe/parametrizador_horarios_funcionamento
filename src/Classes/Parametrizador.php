@@ -1,15 +1,19 @@
 <?php
+    
+    require_once 'BancoDados/ParametrizadorHorarios.php';
 
     class Parametrizador {
 
-        public static function salvar($dados)
+        private $parametrizadorHorarios;
+
+        public function __construct()
         {
-         
-            echo "<pre>";
-            print_r($dados);
-            echo "</pre>";
-            die();
-        
+            $this->parametrizadorHorarios = new ParametrizadorHorarios("parametrizador_horarios");
+        }
+
+        public function parametrizarHorario($arrayHorarios)
+        {
+            $this->parametrizadorHorarios->parametrizarHorario($arrayHorarios);
         }
 
     }

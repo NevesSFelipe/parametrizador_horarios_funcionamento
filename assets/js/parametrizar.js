@@ -55,7 +55,11 @@ function enviarAjax(dados) {
     })
     
     .then(data => {
-        alert("Horarios de Atendimento parametrizados com sucesso.")
+        alert(data.message);
+        
+        setTimeout(() => {
+            location.reload();
+        }, 300);
     })
     
     .catch(error => {

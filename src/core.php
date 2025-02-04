@@ -3,10 +3,11 @@
     require_once 'Classes/Parametrizador.php';
 
     $dados = recuperDadosRequest();
+    $parametrizador = new Parametrizador;
 
     if( $dados['acaoAjax'] === "salvar" ) {
 
-        return Parametrizador::salvar($dados['horarios']);
+        return $parametrizador->parametrizarHorario($dados['horarios']);
 
     }
 
