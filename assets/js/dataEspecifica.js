@@ -12,7 +12,7 @@ function listener() {
     document.getElementById("btnAdicionarCamposDataEspecifica").onclick = adicionarCamposDataEspecifica;
 }
 
-function adicionarCamposDataEspecifica() {
+export function adicionarCamposDataEspecifica() {
 
     const elementosCardDataEspecifica = criarHTMLDataEspecifica();
 

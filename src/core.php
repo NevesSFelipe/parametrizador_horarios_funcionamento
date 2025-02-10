@@ -5,12 +5,10 @@
     $dados = recuperDadosRequest();
     $parametrizador = new Parametrizador;
 
-    if( $dados['acaoAjax'] === "salvar" ) {
+    if( $dados['acaoAjax'] === "carregar" ) { return $parametrizador->carregarParametrizador(); }
 
-        return $parametrizador->parametrizarHorario($dados['horarios']);
-
-    }
-
+    if( $dados['acaoAjax'] === "salvar" ) { return $parametrizador->parametrizarHorario($dados['horarios']); }
+    
     function recuperDadosRequest() {
 
         if( $_SERVER['REQUEST_METHOD'] == 'PUT' || $_SERVER['REQUEST_METHOD'] == 'POST' ) {

@@ -131,6 +131,7 @@
 
         <script type="module" src="assets/js/parametrizar.js?v=<?= time() ?>"></script>
         <script type="module" src="assets/js/dataEspecifica.js?v=<?= time() ?>"></script>
+        <script type="module" src="assets/js/carregarParametrizador.js?v=<?= time() ?>"></script>
 
     </body>
 </html>

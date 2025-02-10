@@ -11,6 +11,11 @@
             $this->parametrizadorHorarios = new ParametrizadorHorarios("parametrizador_horarios");
         }
 
+        public function carregarParametrizador()
+        {
+            $this->parametrizadorHorarios->carregarParametrizador();
+        }
+
         public function parametrizarHorario($arrayHorarios)
         {
             $this->parametrizadorHorarios->parametrizarHorario($arrayHorarios);
