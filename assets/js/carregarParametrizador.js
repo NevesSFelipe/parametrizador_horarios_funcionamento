@@ -39,10 +39,10 @@ async function enviarAjax() {
 
                     adicionarCamposDataEspecifica();
 
-                    document.getElementById("dataEspecifica").value = valor.data;
-                    document.getElementById("horaInicioDataEspecifica").value = valor.horaInicio;
-                    document.getElementById("horaFimDataEspecifica").value = valor.horaFim;
-                    document.getElementById("intervaloDataEspecifica").value = valor.intervalo;
+                    document.getElementById(`dataEspecifica_${chave}`).value = valor.data;
+                    document.getElementById(`horaInicioDataEspecifica_${chave}`).value = valor.horaInicio;
+                    document.getElementById(`horaFimDataEspecifica_${chave}`).value = valor.horaFim;
+                    document.getElementById(`intervaloDataEspecifica_${chave}`).value = valor.intervalo;
 
                 })
 

@@ -1,9 +1,13 @@
-export function criarDIV(className = "", id = "") {
+export function criarDIV(className = "", id = "", valorName = "") {
 
     let div = document.createElement("div");
     div.className = className;
     div.id = id;
 
+    if (valorName) {
+        div.setAttribute(`data-${valorName}`, "");
+    }
+    
     return div;
 }
 
@@ -16,35 +20,35 @@ export function criarLabel(forName = "", conteudoLabel = "") {
     return label;
 }
 
-export function criarInputDate(className = "", id = "") {
+export function criarInputDate(className = "", id = "", valorName = "") {
 
     let inputDate = document.createElement("input");
     inputDate.type = "date";
     inputDate.className = className;
     inputDate.id = id;
-    inputDate.name = id;
+    inputDate.name = valorName;
 
     return inputDate;
 }
 
-export function criarInputTime(className = "", id = "") {
+export function criarInputTime(className = "", id = "", valorName = "") {
 
     let inputTime = document.createElement("input");
     inputTime.type = "time";
     inputTime.className = className;
     inputTime.id = id;
-    inputTime.name = id;
+    inputTime.name = valorName;
 
     return inputTime;
 }
 
-export function criarInputNumber(className = "", id = "", valorMinimo = 0) {
+export function criarInputNumber(className = "", id = "", valorName = "", valorMinimo = 0) {
 
     let inputNumber = document.createElement("input");
     inputNumber.type = "number";
     inputNumber.className = className;
     inputNumber.id = id;
-    inputNumber.name = id;
+    inputNumber.name = valorName;
     inputNumber.min = valorMinimo;
 
     return inputNumber;
